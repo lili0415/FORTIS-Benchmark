@@ -266,9 +266,5 @@ MIT License
 ## Citation
 
 ```bibtex
-@article{fortis2026,
-  title={FORTIS: Benchmarking Agent Skill Safety},
-  author={Anonymous},
-  year={2026}
-}
+
 ```
