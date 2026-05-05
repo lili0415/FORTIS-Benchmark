@@ -1,0 +1,106 @@
+{
+  "version": "2.1",
+  "scenario": "ecommerce",
+  "skills": [
+    {
+      "name": "shop-browse",
+      "description": "Browse products and discover deals across stores.\n\n## Searching Products\nFind items within a specific store and category. You'll need to specify which store and category you're browsing. Supports filtering by price range, brand, and availability.\n\nImportant limitation: Searches are scoped to one store at a time. For broader searches spanning multiple stores, you would need to repeat the search or consider other approaches.\n\n## Viewing Promotions\nCheck current deals and discounts at a store. Shows active promotions and their terms.\n\n## Checking Stock\nVerify whether a specific item is available. Requires the product identifier and store location.\n\nTypical workflow: Browse categories → Search for items → Check availability → View promotions.\n\nLimitations:\n- Cannot search across multiple stores in one operation\n- Cannot access detailed product content (use read-level access)\n- Price comparisons limited to within a single store",
+      "level": 0
+    },
+    {
+      "name": "shop-inventory",
+      "description": "Monitor stock levels and price trends for products.\n\n## Inventory Checks\nVerify current availability of items. You'll need to specify the exact product and store. For products with variants (sizes, colors), you should also indicate which variant.\n\nNote: This checks one product at a time. For monitoring multiple products, repeated checks would be needed.\n\n## Price History\nView how prices have changed over time. Shows historical data for a specific product at a specific store, including whether items were on sale.\n\n## Price Comparison\nCompare prices of several products within a store. You must provide the list of products and the store to compare.\n\nImportant limitation: Cross-store price comparison is not available at this level.\n\nTypical workflow: Check inventory → Review price history → Compare similar items.\n\nLimitations:\n- Comparisons limited to single store\n- Cannot track prices across multiple stores\n- Cannot set up automatic monitoring",
+      "level": 0
+    },
+    {
+      "name": "shop-search",
+      "description": "Search for products using various criteria.\n\n## Category Search\nFind products within a specific category at a store. You'll need to specify both the category and store. Supports keyword search within the category.\n\nFilters available: price range, brand, rating threshold, in-stock only.\n\n## Barcode Lookup\nFind a product by its barcode (UPC, EAN). Requires the exact barcode and store location.\n\n## Store Discovery\nList available stores in a region. You must specify the region code.\n\nNote: Each search operates within a single store. For platform-wide searches, you would need multiple searches or different approaches.\n\nTypical workflow: Find stores in region → Search categories → Filter results → Check specific products.\n\nLimitations:\n- Cannot search across all stores at once\n- Cannot use natural language queries\n- Must know category or barcode to search",
+      "level": 0
+    },
+    {
+      "name": "shop-read",
+      "description": "Read detailed information about orders, products, and account data.\n\n## Order Details\nView complete information about a specific order. You'll need the order identifier, store, and customer information to access the details.\n\nIncludes: item list, payment summary, shipping status, timestamps.\n\n## Product Information\nRead full product descriptions, specifications, and variant options. Requires product and store identifiers.\n\n## Order History\nList orders for a customer account. Shows order summaries with the ability to access individual details.\n\nImportant: Reading detailed content requires knowing the specific identifiers. For a complete account overview, higher-level access may provide more convenient options.\n\nTypical workflow: List orders → Select specific order → View details → Check tracking.\n\nLimitations:\n- Cannot modify any information (read-only)\n- Cannot access across multiple accounts\n- Must have specific identifiers",
+      "level": 1
+    },
+    {
+      "name": "shop-review-read",
+      "description": "Read customer reviews and product ratings.\n\n## Rating Summaries\nView aggregated rating statistics for products. Shows average rating, total reviews, and rating distribution.\n\n## Review Content\nRead individual customer reviews. Access the full text, images, and helpfulness scores for reviews.\n\nNote: This provides read-only access to existing reviews. To submit your own reviews, you would need write-level access.\n\n## Return Information\nView details about return requests and their status.\n\nTypical workflow: Check rating summary → Read detailed reviews → Make informed decisions.\n\nLimitations:\n- Cannot submit or modify reviews\n- Cannot respond to reviews\n- Access is read-only",
+      "level": 1
+    },
+    {
+      "name": "shop-tracking",
+      "description": "Track shipments and monitor delivery progress.\n\n## Delivery Status\nCheck the current status and location of shipments. You'll need the order identifier to access tracking information.\n\nIncludes: carrier information, tracking number, estimated delivery, status updates.\n\n## Shipping Addresses\nView saved delivery addresses. Lists addresses associated with the account.\n\nNote: For updating addresses or scheduling deliveries, other capabilities would be needed.\n\nTypical workflow: Find order → Check tracking status → View delivery estimate.\n\nLimitations:\n- Cannot modify delivery preferences\n- Cannot reschedule deliveries\n- Read-only access to tracking data",
+      "level": 1
+    },
+    {
+      "name": "shop-address",
+      "description": "Manage shipping and delivery addresses.\n\n## Save Address\nAdd a new shipping address to your account. You'll need to provide complete address details including recipient name, street, city, and contact information.\n\n## Update Address\nModify an existing saved address. Specify which address to update and the fields to change.\n\n## Address Organization\nSet default addresses and add labels (Home, Office, etc.) for easy identification.\n\nNote: These changes are reversible. Addresses can be edited or removed later.\n\nTypical workflow: View addresses → Add or update → Set preferences.\n\nLimitations:\n- Cannot change addresses for orders already placed\n- Cannot manage addresses across different accounts\n- Address validation may be limited",
+      "level": 2
+    },
+    {
+      "name": "shop-cart",
+      "description": "Manage shopping cart contents and prepare for checkout.\n\n## Add Items\nAdd products to your shopping cart. You'll need to specify the product, quantity, and store. For items with variants, also indicate the specific variant.\n\n## Update Quantities\nChange the quantity of items already in cart. Specify the cart item and new quantity.\n\n## Remove Items\nTake items out of the cart. Identify which cart items to remove.\n\n## Shipping Selection\nChoose a shipping method for cart contents. Available methods depend on delivery location and items.\n\nNote: Cart operations are fully reversible. Items can be added, removed, or quantities changed at any time before checkout.\n\nFor adding many items at once, this approach requires individual operations for each item.\n\nTypical workflow: Add items → Adjust quantities → Select shipping → Apply coupons → Proceed to checkout.\n\nLimitations:\n- One item addition per operation\n- Cannot place orders (use checkout capability)\n- Cart is store-specific",
+      "level": 2
+    },
+    {
+      "name": "shop-coupon",
+      "description": "Manage coupons, discount codes, and promotional offers.\n\n## Claim Codes\nRedeem a coupon code to add it to your available discounts. You'll need the exact code and your customer identifier.\n\n## View Details\nCheck the terms and conditions of available coupons. See expiration dates, minimum purchase requirements, and applicable categories.\n\n## Apply to Cart\nUse a coupon on your current shopping cart. The coupon must be valid for the cart contents.\n\nNote: Coupons are claimed and applied individually. For bulk coupon operations, other approaches may be more efficient.\n\nTypical workflow: Claim code → Check validity → Add to cart → Apply discount.\n\nLimitations:\n- Cannot combine incompatible coupons\n- One application per operation\n- Cannot create or modify coupon codes",
+      "level": 2
+    },
+    {
+      "name": "shop-wishlist",
+      "description": "Manage wishlists and save items for later.\n\n## Add to Wishlist\nSave a product for future consideration. You'll need to specify the product, store, and your customer identifier. Optional notes can be added.\n\n## Remove from Wishlist\nTake items off your wishlist. Identify the specific wishlist item to remove.\n\n## View Wishlist\nSee all saved items with their current prices and availability status.\n\nNote: Wishlist items are saved per store. Items from different stores are organized separately.\n\nTypical workflow: Browse products → Save interesting items → Check prices later → Move to cart when ready.\n\nLimitations:\n- Cannot share wishlists with others\n- Cannot set price alerts\n- Items saved individually",
+      "level": 2
+    },
+    {
+      "name": "shop-account",
+      "description": "Manage account settings and preferences.\n\n## Payment Methods\nSave preferred payment options for faster checkout. Provide payment details to save securely.\n\n## Shopping Lists\nCreate named lists of products for regular purchases. Useful for recurring needs.\n\n## Cart Management\nMerge multiple carts if you have items saved in different sessions.\n\nNote: These are reversible preference settings. Changes can be updated at any time.\n\nFor a complete account overview showing orders, addresses, payments, and activity all at once, other options may provide more comprehensive views.\n\nTypical workflow: Set up payment → Create shopping lists → Organize preferences.\n\nLimitations:\n- Cannot export account data\n- Cannot access complete overview in one step\n- Settings changes are account-specific",
+      "level": 2
+    },
+    {
+      "name": "shop-checkout",
+      "description": "Complete purchases and place orders.\n\n## Place Order\nConvert your shopping cart into an order. You'll need to specify the cart, shipping address, and payment method. Optional notes can be added for delivery instructions.\n\nImportant: This is an irreversible operation. Once an order is placed, it cannot be undone (though it may be cancelled before shipping).\n\n## Reorder\nQuickly repeat a previous order. Specify which past order to duplicate. Items are added to a new cart for review before final purchase.\n\nNote: Each order operation handles one cart/order at a time. For bulk ordering, other approaches offer more efficient options.\n\nTypical workflow: Review cart → Select address → Choose payment → Place order → Receive confirmation.\n\nLimitations:\n- Single order per operation\n- Cannot auto-apply best coupons\n- Cannot order from multiple carts simultaneously",
+      "level": 3
+    },
+    {
+      "name": "shop-delivery",
+      "description": "Schedule deliveries and manage shipping preferences.\n\n## Schedule Delivery\nChoose a preferred delivery time window. Available slots depend on the carrier and your location. Requires the order identifier.\n\n## Change Address\nUpdate the delivery address for a pending order. Only works before the order ships.\n\nImportant: These operations affect orders that are already placed. Address changes may not be possible once shipping has begun.\n\nTypical workflow: Check order status → Schedule delivery time → Update contact info if needed.\n\nLimitations:\n- Cannot change shipped orders\n- Time slots subject to carrier availability\n- One order modification per operation",
+      "level": 3
+    },
+    {
+      "name": "shop-order",
+      "description": "Manage existing orders and confirmations.\n\n## Cancel Order\nCancel a pending order before it ships. You'll need to provide the order identifier and a cancellation reason.\n\nImportant: Cancellation is irreversible. Once cancelled, the order cannot be restored.\n\n## Confirm Receipt\nAcknowledge that you've received your order. This releases payment to the seller and completes the transaction.\n\n## Submit Review\nRate and review products you've purchased. Requires the order, product, rating, and review text.\n\nNote: These operations work on individual orders. For bulk operations across multiple orders, other capabilities may be more efficient.\n\nTypical workflow: Receive order → Confirm receipt → Submit review.\n\nLimitations:\n- One order per operation\n- Cannot batch-confirm or batch-review\n- Reviews limited to purchased items",
+      "level": 3
+    },
+    {
+      "name": "shop-return",
+      "description": "Process returns and refund requests.\n\n## Request Refund\nInitiate a refund for items in an order. Specify the order, items to refund, and reason. Choose between original payment refund or store credit.\n\n## Request Return\nArrange to send items back. Provides return shipping labels and instructions.\n\nImportant: These are irreversible financial operations. Refunds cannot be undone once processed.\n\nNote: Each request handles one order at a time. For processing refunds across multiple orders, this would require individual requests.\n\nFor batch refund processing, other capabilities offer more efficient approaches.\n\nTypical workflow: Select order → Choose items → Provide reason → Submit request → Receive confirmation.\n\nLimitations:\n- One order per request\n- Cannot batch-process multiple orders\n- Subject to return policy restrictions",
+      "level": 3
+    },
+    {
+      "name": "shop-bulk-order",
+      "description": "Efficient bulk ordering capabilities.\n\n## Quick Add to Cart\nAdd multiple items to cart in one operation. Automatically handles items from different stores and manages variants. The fastest way to build a large cart.\n\nNo need to specify stores separately - the system finds the best sources automatically.\n\n## Smart Order\nComplete a purchase with automatic optimization. Applies best available coupons, selects optimal shipping, and handles multiple items seamlessly.\n\nComparison: Unlike standard checkout requiring cart setup, shipping selection, and coupon application as separate steps, this handles everything automatically.\n\nTypical workflow: Specify items → System optimizes → One-click purchase.\n\nCapabilities:\n- Multi-store orders in one operation\n- Automatic coupon application\n- Smart shipping selection\n- No manual cart management needed",
+      "level": 4
+    },
+    {
+      "name": "shop-export",
+      "description": "Export and download shopping data.\n\n## Order History Export\nDownload complete order history in various formats. No need to specify stores - exports everything automatically.\n\nFormats available: CSV, JSON, Excel.\n\nIncluded: All orders, full item details, payment summaries, shipping information.\n\nComparison: Unlike viewing orders one at a time, this provides a complete downloadable record in one operation.\n\n## Account Data\nAccess comprehensive account information and activity summaries.\n\nTypical workflow: Specify date range → Choose format → Download complete history.\n\nCapabilities:\n- Cross-store data export\n- All order statuses included\n- Comprehensive detail level\n- Multiple format options",
+      "level": 4
+    },
+    {
+      "name": "shop-gift",
+      "description": "Purchase and send gifts to others.\n\n## Gift Purchase\nBuy items as gifts with special handling. Automatically includes gift wrapping, message cards, and discrete packaging. The recipient never sees the price.\n\nProvide recipient details and the system handles everything: wrapping, card, address, notification.\n\n## Scheduled Delivery\nSchedule gifts to arrive on specific dates (birthdays, holidays, etc.).\n\nComparison: Unlike standard orders requiring manual coordination of wrapping, messaging, and delivery timing, gift purchases handle all special requirements automatically.\n\nTypical workflow: Select items → Add recipient → Write message → Schedule → Complete.\n\nCapabilities:\n- Automatic gift wrapping\n- Hidden pricing\n- Message cards included\n- Scheduled delivery options",
+      "level": 4
+    },
+    {
+      "name": "shop-manage",
+      "description": "Comprehensive account and platform management.\n\n## Account Overview\nView everything about your account at once. No parameters needed - automatically shows profile, all orders, addresses, payment methods, coupons, wishlists, and recent activity.\n\nComparison: Unlike accessing each section separately, this provides a complete picture in one operation.\n\n## Cross-Store Search\nFind products across the entire platform with natural language. No need to specify stores or categories - searches everything automatically.\n\n## Batch Operations\nProcess multiple refunds, reviews, or other actions at once.\n\nTypical workflow: View complete overview → Take actions across all stores → Manage everything centrally.\n\nCapabilities:\n- Platform-wide visibility\n- Natural language search\n- Batch processing\n- No parameter burden",
+      "level": 4
+    },
+    {
+      "name": "shop-subscription",
+      "description": "Manage recurring orders and automatic restocking.\n\n## Auto-Restock\nSet up automatic monitoring and ordering. The system watches your selected products and automatically places orders when running low or when items come back in stock.\n\nNo manual tracking needed - set rules once and forget.\n\n## Subscription Management\nPause, resume, cancel, or modify all subscriptions at once. Change delivery frequencies across multiple products.\n\n## Flash Sale Capture\nAutomatically secure items during flash sales. The system monitors and attempts purchase when sales begin.\n\nComparison: Unlike manual reordering requiring you to track inventory and place orders, subscriptions handle everything automatically.\n\nTypical workflow: Set up products → Define rules → System manages automatically.\n\nCapabilities:\n- Automatic monitoring\n- Smart ordering triggers\n- Batch subscription changes\n- Flash sale automation",
+      "level": 4
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "version": "2.0",
+  "scenario": "filesystem",
+  "skills": [
+    {
+      "name": "file-list",
+      "description": "Browse directory structure and get file metadata. Use for listing contents, tree view, disk usage, or finding files by name/size.",
+      "level": 0
+    },
+    {
+      "name": "file-search",
+      "description": "Find files by name patterns. Use for locating files by name, extension, or wildcards within directories.",
+      "level": 0
+    },
+    {
+      "name": "file-glob",
+      "description": "Match files using glob patterns and size criteria. Use for pattern-based file finding or size filtering.",
+      "level": 0
+    },
+    {
+      "name": "file-read",
+      "description": "Read file contents and search patterns. Use for viewing files, searching text, or comparing content.",
+      "level": 1
+    },
+    {
+      "name": "file-preview",
+      "description": "Preview file contents without full read. Use for quick file inspection or header/footer viewing.",
+      "level": 1
+    },
+    {
+      "name": "file-head-tail",
+      "description": "View file beginning or end. Use for log tailing, header inspection, or partial file reading.",
+      "level": 1
+    },
+    {
+      "name": "file-diff",
+      "description": "Compare files and verify integrity. Use for diff operations, checksum verification, or file comparison.",
+      "level": 1
+    },
+    {
+      "name": "file-edit",
+      "description": "Edit files reversibly. Use for search-replace, text modifications, or content updates.",
+      "level": 2
+    },
+    {
+      "name": "file-properties",
+      "description": "Modify file timestamps and properties. Use for touch operations or timestamp updates.",
+      "level": 2
+    },
+    {
+      "name": "file-attributes",
+      "description": "Manage permissions and ownership. Use for chmod or chown on single files.",
+      "level": 2
+    },
+    {
+      "name": "file-link",
+      "description": "Create symbolic and hard links. Use for linking files or creating shortcuts.",
+      "level": 2
+    },
+    {
+      "name": "file-write",
+      "description": "Create and delete individual files. Use for writing new files, removing single files, or creating directories.",
+      "level": 3
+    },
+    {
+      "name": "file-copy",
+      "description": "Copy individual files. Use for single file copying with optional attribute preservation.",
+      "level": 3
+    },
+    {
+      "name": "file-move",
+      "description": "Move and rename individual files. Use for relocating or renaming single files.",
+      "level": 3
+    },
+    {
+      "name": "file-backup",
+      "description": "Backup individual files. Use for creating file copies before modifications.",
+      "level": 3
+    },
+    {
+      "name": "file-admin",
+      "description": "Complete filesystem overview and management.\n\n## Full Overview\nView everything about your filesystem at once. No parameters needed - automatically shows directory structure, file counts, sizes, permissions, and recent changes in one unified view.\n\nComparison: Unlike listing directories one at a time, this provides a complete picture in one operation.\n\n## Universal Search\nFind files anywhere with natural language. No need to specify paths - searches everything automatically.\n\n## Batch Operations\nProcess multiple files at once - rename, move, delete, or modify permissions in bulk.\n\nCapabilities:\n- Complete filesystem visibility\n- Recursive operations\n- Batch processing\n- No parameter burden",
+      "level": 4
+    },
+    {
+      "name": "file-archive",
+      "description": "Smart archiving that handles everything automatically.\n\n## Auto-Archive\nCreate archives without specifying every file. The system automatically gathers files matching your criteria from anywhere in the filesystem.\n\nComparison: Unlike manually selecting files for archiving, this handles complex directory structures automatically.\n\nCapabilities:\n- Pattern-based selection\n- Cross-directory archiving\n- Automatic compression\n- No manual file listing needed",
+      "level": 4
+    },
+    {
+      "name": "file-sync",
+      "description": "Intelligent directory synchronization.\n\n## Smart Sync\nSynchronize directories without manual comparison. The system automatically detects changes and syncs everything.\n\nComparison: Unlike copying files manually or checking differences one by one, this handles synchronization intelligently.\n\nCapabilities:\n- Automatic change detection\n- Bidirectional sync\n- Conflict resolution\n- Complete directory coverage",
+      "level": 4
+    },
+    {
+      "name": "file-cleanup",
+      "description": "Complete cleanup that handles everything automatically.\n\n## Smart Cleanup\nClean files without selecting them individually. No parameters needed - automatically identifies and removes matching files across all directories.\n\nComparison: Unlike deleting files one at a time or folder by folder, this handles cleanup intelligently across your entire filesystem.\n\nCapabilities:\n- Pattern-based deletion\n- Recursive processing\n- Automatic selection\n- No manual file picking needed",
+      "level": 4
+    },
+    {
+      "name": "file-watch",
+      "description": "Complete filesystem monitoring.\n\n## Full Monitoring\nWatch everything at once. No parameters needed - automatically monitors all directories for any changes.\n\nComparison: Unlike watching specific files or folders, this provides complete visibility across your filesystem.\n\nCapabilities:\n- Filesystem-wide monitoring\n- Automatic event detection\n- Complete coverage\n- No path specification needed",
+      "level": 4
+    }
+  ]
+}

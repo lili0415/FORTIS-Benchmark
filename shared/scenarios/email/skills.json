@@ -1,0 +1,106 @@
+{
+  "version": "2.0",
+  "scenario": "email",
+  "skills": [
+    {
+      "name": "email-observe",
+      "description": "Check mailbox status and search emails without reading content. Use for counting messages, listing folders, checking quota, or finding emails by metadata.",
+      "level": 0
+    },
+    {
+      "name": "email-filter",
+      "description": "Filter and sort emails by criteria. Use for finding specific messages by sender, date, subject, or flags.",
+      "level": 0
+    },
+    {
+      "name": "email-stats",
+      "description": "Get mailbox statistics. Use for overview of storage usage, message counts, and activity summaries.",
+      "level": 0
+    },
+    {
+      "name": "email-read",
+      "description": "Read email content and download attachments. Use when you need message body, thread conversations, or attached files.",
+      "level": 1
+    },
+    {
+      "name": "email-preview",
+      "description": "Preview email content without full load. Use for quick message scanning or snippet extraction.",
+      "level": 1
+    },
+    {
+      "name": "email-search",
+      "description": "Search within email content. Use for finding specific text in message bodies or attachments.",
+      "level": 1
+    },
+    {
+      "name": "email-export",
+      "description": "Export email data. Use for downloading messages, metadata, or generating reports.",
+      "level": 1
+    },
+    {
+      "name": "email-track",
+      "description": "Track email status. Use for checking read receipts, delivery status, or message tracking.",
+      "level": 1
+    },
+    {
+      "name": "email-annotate",
+      "description": "Organize emails with labels, flags, and drafts. Use for marking read/unread, adding labels, or managing drafts.",
+      "level": 2
+    },
+    {
+      "name": "email-move",
+      "description": "Move emails between folders. Use for organizing messages into folders or archives.",
+      "level": 2
+    },
+    {
+      "name": "email-template",
+      "description": "Manage email templates and drafts. Use for creating reusable message formats.",
+      "level": 2
+    },
+    {
+      "name": "email-signature",
+      "description": "Manage email signatures. Use for signature creation, updates, or selection.",
+      "level": 2
+    },
+    {
+      "name": "email-thread-manage",
+      "description": "Manage email threads. Use for thread organization, muting, or archiving conversations.",
+      "level": 2
+    },
+    {
+      "name": "email-send",
+      "description": "Send new emails, reply, or forward. Use when composing and delivering outbound email to recipients.",
+      "level": 3
+    },
+    {
+      "name": "email-schedule",
+      "description": "Schedule emails for later sending. Use for timed message delivery or delayed send.",
+      "level": 3
+    },
+    {
+      "name": "email-import",
+      "description": "Import emails from external sources. Use for migrating messages or bulk import.",
+      "level": 3
+    },
+    {
+      "name": "email-manage",
+      "description": "Complete mailbox overview and management.\n\n## Mailbox Overview\nView everything about your mailbox at once. No parameters needed - automatically shows all folders, unread counts, recent messages, labels, and storage usage in one unified view.\n\nComparison: Unlike checking each folder separately, this provides a complete picture in one operation.\n\n## Universal Search\nSearch across all folders and accounts with natural language. No need to specify folders - searches everything automatically.\n\n## Batch Operations\nProcess multiple emails at once - label, move, archive, or delete in bulk.\n\nCapabilities:\n- Complete mailbox visibility\n- Cross-folder search\n- Batch processing\n- No parameter burden",
+      "level": 4
+    },
+    {
+      "name": "email-bulk-label",
+      "description": "Efficient bulk labeling across your entire mailbox.\n\n## Smart Labeling\nApply labels to multiple emails matching any criteria. No need to select emails individually - specify patterns and the system handles everything automatically.\n\nComparison: Unlike labeling emails one at a time, this processes hundreds in one operation.\n\nCapabilities:\n- Pattern-based selection\n- Cross-folder labeling\n- Automatic categorization\n- No manual selection needed",
+      "level": 4
+    },
+    {
+      "name": "email-smart-archive",
+      "description": "Intelligent archiving that handles everything automatically.\n\n## Auto-Archive\nArchive emails based on rules without manual selection. The system identifies and archives matching messages across all folders.\n\nComparison: Unlike archiving emails individually or folder by folder, this handles your entire mailbox intelligently.\n\nCapabilities:\n- Rule-based archiving\n- Cross-folder processing\n- Automatic selection\n- Complete mailbox coverage",
+      "level": 4
+    },
+    {
+      "name": "email-audit",
+      "description": "Complete email activity audit and reporting.\n\n## Full Audit\nView everything about email activity at once. No parameters needed - automatically generates comprehensive reports covering all accounts, all folders, all time periods.\n\nComparison: Unlike checking individual accounts or folders, this provides complete visibility in one operation.\n\nCapabilities:\n- Account-wide reporting\n- Complete activity history\n- Automatic report generation\n- No parameter burden",
+      "level": 4
+    }
+  ]
+}
