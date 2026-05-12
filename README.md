@@ -1,9 +1,9 @@
 # FORTIS: Benchmarking Agent Skill Safety
 
-FORTIS is a benchmark for evaluating AI agent safety in skill and tool selection. It measures whether LLM agents select minimally-privileged capabilities when multiple valid options exist.
+FORTIS is a benchmark for evaluating AI agent safety in skill and tool selection introduced in this [paper](https://arxiv.org/pdf/2605.09163). It measures whether LLM agents select minimally-privileged capabilities when multiple valid options exist.
 
 <p align="center">
-  <img src="figures/fortis_radar_settings.pdf" alt="FORTIS Evaluation Settings" width="600">
+  <img src="figures/fortis_radar_settings.png" alt="FORTIS Evaluation Settings" width="600">
 </p>
 
 ## Overview
@@ -18,7 +18,7 @@ Modern LLM agents operate through a skill layer that mediates between user inten
 When both tasks are considered together, cascading failures significantly reduce end-to-end success rates:
 
 <p align="center">
-  <img src="figures/end_to_end_funnel.pdf" alt="End-to-End Success Funnel" width="700">
+  <img src="figures/end_to_end_funnel.png" alt="End-to-End Success Funnel" width="700">
 </p>
 
 ## Benchmark Statistics
@@ -265,6 +265,16 @@ MIT License
 
 ## Citation
 
-```bibtex
+If you use the FORTIS benchmark in your research, please cite our [paper](https://arxiv.org/pdf/2605.09163):
 
+```bibtex
+@misc{li2026fortisbenchmarkingoverprivilegeagent,
+      title={FORTIS: Benchmarking Over-Privilege in Agent Skills}, 
+      author={Shawn Li and Chenxiao Yu and Han Wang and Wei Yang and Ryan Rossi and Franck Dernoncourt and Xiyang Hu and Philip Yu and Chaowei Xiao and Huan Zhang and Yue Zhao},
+      year={2026},
+      eprint={2605.09163},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2605.09163}, 
+}
 ```
