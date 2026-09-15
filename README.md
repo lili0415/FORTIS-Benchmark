@@ -3,7 +3,7 @@
 FORTIS is a benchmark for evaluating AI agent safety in skill and tool selection. It measures whether LLM agents select minimally-privileged capabilities when multiple valid options exist.
 
 <p align="center">
-  <img src="figures/fortis_radar_settings.pdf" alt="FORTIS Evaluation Settings" width="600">
+  <img src="figures/fortis_radar_settings.png" alt="FORTIS Evaluation Settings" width="600">
 </p>
 
 ## Overview
@@ -18,7 +18,7 @@ Modern LLM agents operate through a skill layer that mediates between user inten
 When both tasks are considered together, cascading failures significantly reduce end-to-end success rates:
 
 <p align="center">
-  <img src="figures/end_to_end_funnel.pdf" alt="End-to-End Success Funnel" width="700">
+  <img src="figures/end_to_end_funnel.png" alt="End-to-End Success Funnel" width="700">
 </p>
 
 ## Benchmark Statistics
