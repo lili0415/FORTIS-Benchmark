@@ -266,5 +266,13 @@ MIT License
 ## Citation
 
 ```bibtex
-
+@misc{li2026fortisbenchmarkingoverprivilegeagent,
+      title={FORTIS: Benchmarking Over-Privilege in Agent Skills}, 
+      author={Shawn Li and Chenxiao Yu and Han Wang and Wei Yang and Ryan Rossi and Franck Dernoncourt and Xiyang Hu and Philip Yu and Chaowei Xiao and Huan Zhang and Yue Zhao},
+      year={2026},
+      eprint={2605.09163},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2605.09163}, 
+}
 ```
